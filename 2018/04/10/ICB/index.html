@@ -16,13 +16,13 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="任何一个元素都会有一个包含块作为设置尺寸属性和偏移属性的“相对参考系”。根元素是有包含块的，它是一个不可见的矩形框。  连续媒体  对于连续媒体，浏览器窗口就是一种连续媒体，ICB的尺寸为viewport,“首屏” 分页媒体  对于分页媒体来说，ICB的尺寸为page area（页面显示区域）   static和relative定位元素的包含块，为其块级祖先元素（通常是块级父元素）的content">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/img/absolute.png">
-<meta property="og:image" content="http://yoursite.com/img/location.png">
-<meta property="og:updated_time" content="2018-04-10T13:07:42.000Z">
+<meta property="og:image" content="http://yoursite.com/img/icb/absolute.png">
+<meta property="og:image" content="http://yoursite.com/img/icb/location.png">
+<meta property="og:updated_time" content="2018-04-13T06:53:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ICB（initial containing block, 初始包含块）">
 <meta name="twitter:description" content="任何一个元素都会有一个包含块作为设置尺寸属性和偏移属性的“相对参考系”。根元素是有包含块的，它是一个不可见的矩形框。  连续媒体  对于连续媒体，浏览器窗口就是一种连续媒体，ICB的尺寸为viewport,“首屏” 分页媒体  对于分页媒体来说，ICB的尺寸为page area（页面显示区域）   static和relative定位元素的包含块，为其块级祖先元素（通常是块级父元素）的content">
-<meta name="twitter:image" content="http://yoursite.com/img/absolute.png">
+<meta name="twitter:image" content="http://yoursite.com/img/icb/absolute.png">
   
   
     <link rel="icon" href="/favicon.png">
@@ -171,12 +171,12 @@
 </ul>
 <ol>
 <li>static和relative定位元素的包含块，为其块级祖先元素（通常是块级父元素）的content box，此类元素相对于自身位置定位；</li>
-<li>对于absolute定位的元素来说，它的包含块，为最近的非静态定位祖先元素的<strong>padding box</strong>，查无非静态定位祖先元素，那么它的包含块是<strong>ICB（即根元素的包含块）</strong><br> 对于父元素，padding为50px，height为100px，position为relative；对于子元素，position为absolute，top为50px，height为50px；此时子元素的位置刚好与父元素的content box位置相同。并且如果设置了top为5%，此时 计算出的px值为：（50 x 2+100）x 0.5=10px; 如果此时子元素为relative，top为100 x 0.5=5px<br><img src="/img/absolute.png" alt="absolute"></li>
+<li>对于absolute定位的元素来说，它的包含块，为最近的非静态定位祖先元素的<strong>padding box</strong>，查无非静态定位祖先元素，那么它的包含块是<strong>ICB（即根元素的包含块）</strong><br> 对于父元素，padding为50px，height为100px，position为relative；对于子元素，position为absolute，top为50px，height为50px；此时子元素的位置刚好与父元素的content box位置相同。并且如果设置了top为5%，此时 计算出的px值为：（50 x 2+100）x 0.5=10px; 如果此时子元素为relative，top为100 x 0.5=5px<br><img src="/img/icb/absolute.png" alt="absolute"></li>
 <li>fix定位元素的包含块，为当前viewport（视窗）</li>
 </ol>
 <p>我们一直认为 <strong>”当一个绝对定位元素找不到最近的非static祖先元素时，则相对于根元素定位，这种说法也是不严谨的”</strong>应该是<strong>“首屏”</strong></p>
 <p>将根元素html的高度设置为超过viewport高度，如5000px（假设viewport高度为500px），再将一个没有最近的非static祖先元素的绝对定位元素的bottom设置为0，尺寸为100px100px即可</p>
-<p><img src="/img/location.png" alt="absolute"></p>
+<p><img src="/img/icb/location.png" alt="absolute"></p>
 <p><strong>此时该元素并没有相对于根元素定位，而是相对于首屏绝对定位</strong><br>最后我们应当注意ICB就是指的浏览器首屏，而不是某个元素的包含块</p>
 <p>参考文章：<a href="https://mp.weixin.qq.com/s/-LcNZWFFty2lWuND6uuNNA" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/-LcNZWFFty2lWuND6uuNNA</a></p>
 
@@ -416,6 +416,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
             
             <div class="clearfix"></div>

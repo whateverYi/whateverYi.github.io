@@ -8,18 +8,20 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>margin | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="parentWidth = child-margin-left + child-border-left-width + child-padding-left + width + child-padding-right + child-border-right + child-margin-right.对于元素宽度固定的时候，margin：0 auto;可以是该元素居中，因为margin-left">
+  <meta name="description" content="parentWidth = child-margin-left + child-border-left-width + child-padding-left + width + child-padding-right + child-border-right + child-margin-right.对于元素宽度固定的时候，margin：0 auto;可以使该元素居中，因为margin-left">
 <meta name="keywords" content="css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="margin">
 <meta property="og:url" content="http://yoursite.com/2018/04/10/margin/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="parentWidth = child-margin-left + child-border-left-width + child-padding-left + width + child-padding-right + child-border-right + child-margin-right.对于元素宽度固定的时候，margin：0 auto;可以是该元素居中，因为margin-left">
+<meta property="og:description" content="parentWidth = child-margin-left + child-border-left-width + child-padding-left + width + child-padding-right + child-border-right + child-margin-right.对于元素宽度固定的时候，margin：0 auto;可以使该元素居中，因为margin-left">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-10T13:07:48.000Z">
+<meta property="og:image" content="http://yoursite.com/img/margin/span.png">
+<meta property="og:updated_time" content="2018-04-13T06:53:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="margin">
-<meta name="twitter:description" content="parentWidth = child-margin-left + child-border-left-width + child-padding-left + width + child-padding-right + child-border-right + child-margin-right.对于元素宽度固定的时候，margin：0 auto;可以是该元素居中，因为margin-left">
+<meta name="twitter:description" content="parentWidth = child-margin-left + child-border-left-width + child-padding-left + width + child-padding-right + child-border-right + child-margin-right.对于元素宽度固定的时候，margin：0 auto;可以使该元素居中，因为margin-left">
+<meta name="twitter:image" content="http://yoursite.com/img/margin/span.png">
   
   
     <link rel="icon" href="/favicon.png">
@@ -162,16 +164,17 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ol>
-<li>parentWidth = child-margin-left + child-border-left-width + child-padding-left + width + child-padding-right + child-border-right + child-margin-right.<br>对于元素宽度固定的时候，margin：0 auto;可以是该元素居中，因为margin-left和margin-right会自动平分父元素的剩余宽度。从而使得上述公式中元素的所有宽度之和为父元素的content-box，但是对于垂直方向上margin（top,bottom） 为auto时，并不能平分，而是0。但是可以使用margin: auto 0，实现绝对或固定定位元素在包含块内部垂直居中，因为绝对或固定定位元素垂直方向上的margin，其 auto仍会取包含块的剩余高度’top’ + ‘margin-top’ + ‘border-top-width’ + ‘padding-top’ + ‘height’ + ‘padding-bottom’ + ‘border-bottom-width’ + ‘margin-bottom’ + ‘bottom’ = height of containing block<br> <strong>height of containing block</strong>对于相对定位元素，它的包含块，为其块级祖先元素（通常是块级父元素）的content box;而绝对元素，为padding box<br> 所以对于绝对定位或者固定定位的元素，垂直居中还有一种方式<br> `.child{<pre><code>    position:absolute;
-     top:0;
-     bottom:0;
-     background:green;
-     width:140px;
-     height:20px;
-     margin:auto 0;
-     text-align:center;
-}`    
-</code></pre> 额外收获：行内元素，设置上下margin，上下padding是无效的，不起作用。行内元素的高度只受line-height的影响。上下margin，上下padding不能改变其高度，不会撑开父元素。</li>
+<li>parentWidth = child-margin-left + child-border-left-width + child-padding-left + width + child-padding-right + child-border-right + child-margin-right.<br>对于元素宽度固定的时候，margin：0 auto;可以使该元素居中，因为margin-left和margin-right会自动平分父元素的剩余宽度。<br>从而使得上述公式中元素的所有宽度之和为父元素的content-box，但是对于垂直方向上margin（top,bottom） 为auto时，并不能平分，而是0。但是可以使用margin: auto 0，实现绝对或固定定位元素在包含块内部垂直居中，因为绝对或固定定位元素垂直方向上的margin，其 auto仍会取包含块的剩余高度</li>
+<li><p>’top’ + ‘margin-top’ + ‘border-top-width’ + ‘padding-top’ + ‘height’ + ‘padding-bottom’ + ‘border-bottom-width’ + ‘margin-bottom’ + ‘bottom’ = height of containing block<br> <strong>height of containing block</strong>对于相对定位元素，它的包含块，为其块级祖先元素（通常是块级父元素）的content box;而绝对元素，为padding box<br> 所以对于绝对定位或者固定定位的元素，垂直居中还有一种方式<br><code>{
+ position:absolute;
+ top:0;
+ bottom:0;
+ width:140px;
+ height:20px;
+ margin:auto 0;
+}</code></p>
+<p> 额外收获：行内元素，设置上下margin，上下padding是无效的，不起作用。行内元素的高度只受line-height的影响。上下margin，上下padding不能改变其高度，不会撑开父元素,虽然当行内元素有背景色时，上下padding会把其撑开。但是并没有对文档流有影响。<br><img src="/img/margin/span.png" alt="absolute"></p>
+</li>
 </ol>
 
       
@@ -276,6 +279,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/04/13/last-child-and-last-of-type/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          last-child and last-of-type
+        
+      </div>
+    </a>
   
   
     <a href="/2018/04/10/ICB/" id="article-nav-older" class="article-nav-link-wrap">
@@ -406,6 +418,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
             
             <div class="clearfix"></div>
