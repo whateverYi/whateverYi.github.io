@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="My Blog">
 <meta property="og:description" content="首先@import必须要写在style block的顶部，否则不起作用当都使用@import时，不会有副作用，会同时下载css文件link和@import 混合使用时，在IE(6,7,8)&amp;lt;link rel=&amp;#39;stylesheet&amp;#39; type=&amp;#39;text/css&amp;#39; href=&amp;#39;a.css&amp;#39;&amp;gt;     &amp;lt;style&amp;gt;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-16T07:20:21.000Z">
+<meta property="og:updated_time" content="2018-04-16T07:23:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="link and @import">
 <meta name="twitter:description" content="首先@import必须要写在style block的顶部，否则不起作用当都使用@import时，不会有副作用，会同时下载css文件link和@import 混合使用时，在IE(6,7,8)&amp;lt;link rel=&amp;#39;stylesheet&amp;#39; type=&amp;#39;text/css&amp;#39; href=&amp;#39;a.css&amp;#39;&amp;gt;     &amp;lt;style&amp;gt;">
@@ -164,7 +164,7 @@
         <h3 id="首先-import必须要写在style-block的顶部，否则不起作用"><a href="#首先-import必须要写在style-block的顶部，否则不起作用" class="headerlink" title="首先@import必须要写在style block的顶部，否则不起作用"></a>首先@import必须要写在style block的顶部，否则不起作用</h3><h3 id="当都使用-import时，不会有副作用，会同时下载css文件"><a href="#当都使用-import时，不会有副作用，会同时下载css文件" class="headerlink" title="当都使用@import时，不会有副作用，会同时下载css文件"></a>当都使用@import时，不会有副作用，会同时下载css文件</h3><h3 id="link和-import-混合使用时，在IE-6-7-8"><a href="#link和-import-混合使用时，在IE-6-7-8" class="headerlink" title="link和@import 混合使用时，在IE(6,7,8)"></a>link和@import 混合使用时，在IE(6,7,8)</h3><p><code>&lt;link rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;a.css&#39;&gt;
     &lt;style&gt;
         @import url(&#39;b.css&#39;);
-    &lt;/style&gt;</code>A文件下载完毕之后，再下载B文件。两个文件不能同时并行下载</p>
+    &lt;/style&gt;</code><br>    A文件下载完毕之后，再下载B文件。两个文件不能同时并行下载</p>
 <h3 id="link里用-import"><a href="#link里用-import" class="headerlink" title="link里用@import"></a>link里用@import</h3><p><code>&lt;link rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;a.css&#39;&gt;</code><br>in a.css:<br><code>@import url(&#39;b.css&#39;);</code></p>
 <pre><code>相同的，A文件下载完毕之后，再下载B文件。两个文件不能同时并行下载。但是此时，在所有浏览器中都是该表现，不只有ie6；
 </code></pre><h3 id="link-blocks，link里用-import"><a href="#link-blocks，link里用-import" class="headerlink" title="link blocks，link里用@import"></a>link blocks，link里用@import</h3><p><code>&lt;link rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;a.css&#39;&gt;
