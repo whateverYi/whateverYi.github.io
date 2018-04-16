@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="My Blog">
 <meta property="og:description" content="首先@import必须要写在style block的顶部，否则不起作用 当都使用@import时，不会有副作用，会同时下载css文件 link和@import 混合使用时，在IE(6,7,8)  &amp;lt;link rel=&amp;#39;stylesheet&amp;#39; type=&amp;#39;text/css&amp;#39; href=&amp;#39;a.css&amp;#39;&amp;gt;     &amp;lt;style&amp;gt;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-16T07:07:07.000Z">
+<meta property="og:updated_time" content="2018-04-16T07:08:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="link and @import">
 <meta name="twitter:description" content="首先@import必须要写在style block的顶部，否则不起作用 当都使用@import时，不会有副作用，会同时下载css文件 link和@import 混合使用时，在IE(6,7,8)  &amp;lt;link rel=&amp;#39;stylesheet&amp;#39; type=&amp;#39;text/css&amp;#39; href=&amp;#39;a.css&amp;#39;&amp;gt;     &amp;lt;style&amp;gt;">
@@ -169,20 +169,20 @@
 <p><code>&lt;link rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;a.css&#39;&gt;
     &lt;style&gt;
         @import url(&#39;b.css&#39;);
-    &lt;/style&gt;</code><br>A文件下载完毕之后，再下载B文件。两个文件不能同时并行下载</p>
+    &lt;/style&gt;</code><br>    A文件下载完毕之后，再下载B文件。两个文件不能同时并行下载</p>
 <ol start="4">
 <li>link里用@import</li>
 </ol>
-<p><code>&lt;link rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;a.css&#39;&gt;</code><br>in a.css:<br><code>@import url(&#39;b.css&#39;);</code><br>相同的，A文件下载完毕之后，再下载B文件。两个文件不能同时并行下载。但是此时，在所有浏览器中都是该表现，不只有ie6；</p>
+<p><code>&lt;link rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;a.css&#39;&gt;</code><br>in a.css:<br><code>@import url(&#39;b.css&#39;);</code><br>    相同的，A文件下载完毕之后，再下载B文件。两个文件不能同时并行下载。但是此时，在所有浏览器中都是该表现，不只有ie6；</p>
 <ol start="5">
 <li>link blocks，link里用@import</li>
 </ol>
 <p><code>&lt;link rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;a.css&#39;&gt;
-    &lt;link rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;proxy.css&#39;&gt;</code><br>in proxy.css:</p>
-<p><code>@import url(&#39;b.css&#39;);</code></p>
-<p>在ie中，会同时下载a和proxy，但是不会在proxy完毕之后，立刻加载b文件，会等到a文件加载完成之后，再去加载b文件。</p>
-<p>在其他浏览器中，也会同时下载a和proxy，但是也会在proxy完毕之后，立刻加载b文件。</p>
-<ol start="6">
+    &lt;link rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;proxy.css&#39;&gt;</code><br>in proxy.css:<br><code>@import url(&#39;b.css&#39;);</code></p>
+<pre><code>在ie中，会同时下载a和proxy，但是不会在proxy完毕之后，立刻加载b文件，会等到a文件加载完成之后，再去加载b文件。
+
+在其他浏览器中，也会同时下载a和proxy，但是也会在proxy完毕之后，立刻加载b文件。
+</code></pre><ol start="6">
 <li>在IE中，如果使用了@import，会导致文件下载顺序和定义时顺序不一致。</li>
 </ol>
 <p>参考文章：<a href="http://www.stevesouders.com/blog/2009/04/09/dont-use-import/" target="_blank" rel="noopener">http://www.stevesouders.com/blog/2009/04/09/dont-use-import/</a></p>
