@@ -166,12 +166,14 @@
 <p><code>&lt;link rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;a.css&#39;&gt;
     &lt;style&gt;
         @import url(&#39;b.css&#39;);
-    &lt;/style&gt;</code><br>    A文件下载完毕之后，再下载B文件。两个文件不能同时并行下载</p>
-<ol start="4">
+    &lt;/style&gt;</code></p>
+<pre><code>A文件下载完毕之后，再下载B文件。两个文件不能同时并行下载
+</code></pre><ol start="4">
 <li>link里用@import</li>
 </ol>
-<p><code>&lt;link rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;a.css&#39;&gt;</code><br>in a.css:<br><code>@import url(&#39;b.css&#39;);</code><br>    相同的，A文件下载完毕之后，再下载B文件。两个文件不能同时并行下载。但是此时，在所有浏览器中都是该表现，不只有ie6；</p>
-<ol start="5">
+<p><code>&lt;link rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;a.css&#39;&gt;</code><br>in a.css:<br><code>@import url(&#39;b.css&#39;);</code></p>
+<pre><code>相同的，A文件下载完毕之后，再下载B文件。两个文件不能同时并行下载。但是此时，在所有浏览器中都是该表现，不只有ie6；
+</code></pre><ol start="5">
 <li>link blocks，link里用@import</li>
 </ol>
 <p><code>&lt;link rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;a.css&#39;&gt;
