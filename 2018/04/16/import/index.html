@@ -6,23 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>ICB（initial containing block, 初始包含块） | My Blog</title>
+  <title>link and @import | My Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="任何一个元素都会有一个包含块作为设置尺寸属性和偏移属性的“相对参考系”。根元素是有包含块的，它是一个不可见的矩形框。  连续媒体  对于连续媒体，浏览器窗口就是一种连续媒体，ICB的尺寸为viewport,“首屏” 分页媒体  对于分页媒体来说，ICB的尺寸为page area（页面显示区域）   static和relative定位元素的包含块，为其块级祖先元素（通常是块级父元素）的content">
+  <meta name="description" content="首先@import必须要写在style block的顶部，否则不起作用 当都使用@import时，不会有副作用，会同时下载css文件 link和@import 混合使用时，在IE(6,7,8)  &amp;lt;link rel=&amp;#39;stylesheet&amp;#39; type=&amp;#39;text/css&amp;#39; href=&amp;#39;a.css&amp;#39;&amp;gt;     &amp;lt;style&amp;gt;">
 <meta name="keywords" content="css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ICB（initial containing block, 初始包含块）">
-<meta property="og:url" content="http://yoursite.com/2018/04/10/ICB/index.html">
+<meta property="og:title" content="link and @import">
+<meta property="og:url" content="http://yoursite.com/2018/04/16/import/index.html">
 <meta property="og:site_name" content="My Blog">
-<meta property="og:description" content="任何一个元素都会有一个包含块作为设置尺寸属性和偏移属性的“相对参考系”。根元素是有包含块的，它是一个不可见的矩形框。  连续媒体  对于连续媒体，浏览器窗口就是一种连续媒体，ICB的尺寸为viewport,“首屏” 分页媒体  对于分页媒体来说，ICB的尺寸为page area（页面显示区域）   static和relative定位元素的包含块，为其块级祖先元素（通常是块级父元素）的content">
+<meta property="og:description" content="首先@import必须要写在style block的顶部，否则不起作用 当都使用@import时，不会有副作用，会同时下载css文件 link和@import 混合使用时，在IE(6,7,8)  &amp;lt;link rel=&amp;#39;stylesheet&amp;#39; type=&amp;#39;text/css&amp;#39; href=&amp;#39;a.css&amp;#39;&amp;gt;     &amp;lt;style&amp;gt;">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/img/icb/absolute.png">
-<meta property="og:image" content="http://yoursite.com/img/icb/location.png">
-<meta property="og:updated_time" content="2018-04-13T06:53:10.000Z">
+<meta property="og:updated_time" content="2018-04-16T07:02:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ICB（initial containing block, 初始包含块）">
-<meta name="twitter:description" content="任何一个元素都会有一个包含块作为设置尺寸属性和偏移属性的“相对参考系”。根元素是有包含块的，它是一个不可见的矩形框。  连续媒体  对于连续媒体，浏览器窗口就是一种连续媒体，ICB的尺寸为viewport,“首屏” 分页媒体  对于分页媒体来说，ICB的尺寸为page area（页面显示区域）   static和relative定位元素的包含块，为其块级祖先元素（通常是块级父元素）的content">
-<meta name="twitter:image" content="http://yoursite.com/img/icb/absolute.png">
+<meta name="twitter:title" content="link and @import">
+<meta name="twitter:description" content="首先@import必须要写在style block的顶部，否则不起作用 当都使用@import时，不会有副作用，会同时下载css文件 link和@import 混合使用时，在IE(6,7,8)  &amp;lt;link rel=&amp;#39;stylesheet&amp;#39; type=&amp;#39;text/css&amp;#39; href=&amp;#39;a.css&amp;#39;&amp;gt;     &amp;lt;style&amp;gt;">
   
   
     <link rel="icon" href="/favicon.png">
@@ -144,41 +141,51 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-ICB" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-import" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      ICB（initial containing block, 初始包含块）
+      link and @import
     </h1>
   
 
         
-        <a href="/2018/04/10/ICB/" class="archive-article-date">
-  	<time datetime="2018-04-10T07:00:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-10</time>
+        <a href="/2018/04/16/import/" class="archive-article-date">
+  	<time datetime="2018-04-16T06:03:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>任何一个元素都会有一个包含块作为设置尺寸属性和偏移属性的“相对参考系”。根元素是有包含块的，它是一个不可见的矩形框。</p>
-<ul>
-<li>连续媒体<br>  对于连续媒体，浏览器窗口就是一种连续媒体，ICB的尺寸为viewport,<strong>“首屏”</strong></li>
-<li>分页媒体<br>  对于分页媒体来说，ICB的尺寸为page area（页面显示区域）</li>
-</ul>
-<ol>
-<li>static和relative定位元素的包含块，为其块级祖先元素（通常是块级父元素）的content box，此类元素相对于自身位置定位；</li>
-<li>对于absolute定位的元素来说，它的包含块，为最近的非静态定位祖先元素的<strong>padding box</strong>，查无非静态定位祖先元素，那么它的包含块是<strong>ICB（即根元素的包含块）</strong><br> 对于父元素，padding为50px，height为100px，position为relative；对于子元素，position为absolute，top为50px，height为50px；此时子元素的位置刚好与父元素的content box位置相同。并且如果设置了top为5%，此时 计算出的px值为：（50 x 2+100）x 0.5=10px; 如果此时子元素为relative，top为100 x 0.5=5px<br><img src="/img/icb/absolute.png" alt="absolute"></li>
-<li>fix定位元素的包含块，为当前viewport（视窗）</li>
+        <ol>
+<li>首先@import必须要写在style block的顶部，否则不起作用</li>
+<li>当都使用@import时，不会有副作用，会同时下载css文件</li>
+<li>link和@import 混合使用时，在IE(6,7,8)</li>
 </ol>
-<p>我们一直认为 <strong>”当一个绝对定位元素找不到最近的非static祖先元素时，则相对于根元素定位，这种说法也是不严谨的”</strong>应该是<strong>“首屏”</strong></p>
-<p>将根元素html的高度设置为超过viewport高度，如5000px（假设viewport高度为500px），再将一个没有最近的非static祖先元素的绝对定位元素的bottom设置为0，尺寸为100px100px即可</p>
-<p><img src="/img/icb/location.png" alt="absolute"></p>
-<p><strong>此时该元素并没有相对于根元素定位，而是相对于首屏绝对定位</strong><br>最后我们应当注意ICB就是指的浏览器首屏，而不是某个元素的包含块</p>
-<p>参考文章：<a href="https://mp.weixin.qq.com/s/-LcNZWFFty2lWuND6uuNNA" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/-LcNZWFFty2lWuND6uuNNA</a></p>
+<p><code>&lt;link rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;a.css&#39;&gt;
+    &lt;style&gt;
+        @import url(&#39;b.css&#39;);
+    &lt;/style&gt;</code><br>A文件下载完毕之后，再下载B文件。两个文件不能同时并行下载</p>
+<ol start="4">
+<li><h3 id="link里用-import"><a href="#link里用-import" class="headerlink" title="link里用@import"></a>link里用@import</h3></li>
+</ol>
+<p><code>&lt;link rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;a.css&#39;&gt;</code><br>in a.css:<br><code>@import url(&#39;b.css&#39;);</code><br>相同的，A文件下载完毕之后，再下载B文件。两个文件不能同时并行下载。但是此时，在所有浏览器中都是该表现，不只有ie6；</p>
+<ol start="5">
+<li><h3 id="link-blocks，link里用-import"><a href="#link-blocks，link里用-import" class="headerlink" title="link blocks，link里用@import"></a>link blocks，link里用@import</h3></li>
+</ol>
+<p><code>&lt;link rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;a.css&#39;&gt;
+    &lt;link rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;proxy.css&#39;&gt;</code><br>in proxy.css:</p>
+<p><code>@import url(&#39;b.css&#39;);</code></p>
+<p>在ie中，会同时下载a和proxy，但是不会在proxy完毕之后，立刻加载b文件，会等到a文件加载完成之后，再去加载b文件。</p>
+<p>在其他浏览器中，也会同时下载a和proxy，但是也会在proxy完毕之后，立刻加载b文件。</p>
+<ol start="6">
+<li>在IE中，如果使用了@import，会导致文件下载顺序和定义时顺序不一致。</li>
+</ol>
+<p>参考文章：<a href="http://www.stevesouders.com/blog/2009/04/09/dont-use-import/" target="_blank" rel="noopener">http://www.stevesouders.com/blog/2009/04/09/dont-use-import/</a></p>
 
       
 
@@ -269,7 +276,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/04/10/ICB/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/04/16/import/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -283,15 +290,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/04/10/margin/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          margin
-        
-      </div>
-    </a>
   
+    <a href="/2018/04/13/vue-对象更改检测注意事项/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue - 对象更改检测注意事项</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
