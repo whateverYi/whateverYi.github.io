@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="My Blog">
 <meta property="og:description" content="首先@import必须要写在style block的顶部，否则不起作用 当都使用@import时，不会有副作用，会同时下载css文件 link和@import 混合使用时，在IE(6,7,8)  &amp;lt;link rel=&amp;#39;stylesheet&amp;#39; type=&amp;#39;text/css&amp;#39; href=&amp;#39;a.css&amp;#39;&amp;gt;     &amp;lt;style&amp;gt;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-16T07:02:28.000Z">
+<meta property="og:updated_time" content="2018-04-16T07:07:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="link and @import">
 <meta name="twitter:description" content="首先@import必须要写在style block的顶部，否则不起作用 当都使用@import时，不会有副作用，会同时下载css文件 link和@import 混合使用时，在IE(6,7,8)  &amp;lt;link rel=&amp;#39;stylesheet&amp;#39; type=&amp;#39;text/css&amp;#39; href=&amp;#39;a.css&amp;#39;&amp;gt;     &amp;lt;style&amp;gt;">
@@ -171,11 +171,11 @@
         @import url(&#39;b.css&#39;);
     &lt;/style&gt;</code><br>A文件下载完毕之后，再下载B文件。两个文件不能同时并行下载</p>
 <ol start="4">
-<li><h3 id="link里用-import"><a href="#link里用-import" class="headerlink" title="link里用@import"></a>link里用@import</h3></li>
+<li>link里用@import</li>
 </ol>
 <p><code>&lt;link rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;a.css&#39;&gt;</code><br>in a.css:<br><code>@import url(&#39;b.css&#39;);</code><br>相同的，A文件下载完毕之后，再下载B文件。两个文件不能同时并行下载。但是此时，在所有浏览器中都是该表现，不只有ie6；</p>
 <ol start="5">
-<li><h3 id="link-blocks，link里用-import"><a href="#link-blocks，link里用-import" class="headerlink" title="link blocks，link里用@import"></a>link blocks，link里用@import</h3></li>
+<li>link blocks，link里用@import</li>
 </ol>
 <p><code>&lt;link rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;a.css&#39;&gt;
     &lt;link rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;proxy.css&#39;&gt;</code><br>in proxy.css:</p>
